@@ -1,0 +1,339 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&display=swap");
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: "Cabin", sans-serif;
+}
+
+/* for scroll effect*/
+header,
+section {
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+section {
+  height: 800px;
+  border-top-right-radius: 50px;
+  border-top-left-radius: 50px;
+  margin-top: -50px;
+}
+
+h1 {
+  margin-bottom: 50px;
+  font-size: 35px;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+p {
+  line-height: 28px;
+}
+
+.spacing {
+  padding: 4vw 25vw 4vw 25vw;
+}
+
+.bg-peachpuff {
+  background: peachpuff;
+}
+
+.bg-linen {
+  background-color: linen;
+}
+
+/* //// First Section //// */
+
+.hero-section {
+  background-color: lightblue;
+  height: 600px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+
+.hero-section h1 {
+  color: white;
+  font-size: 3.2em !important;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* //// Song Section //// */
+
+.song-container {
+  margin: 50px auto;
+  list-style: none;
+  overflow: auto;
+  white-space: nowrap;
+  width: 80%;
+}
+
+.song-container li {
+  border-radius: 5px;
+  padding: 5px;
+  text-align: center;
+  width: 120px;
+  height: 120px;
+  margin-right: 12px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.song-container li:hover {
+  filter: brightness(110%);
+}
+
+/*cover styling*/
+
+.song-container li:nth-child(1) {
+  background-color: pink;
+}
+
+.song-container li:nth-child(2) {
+  background: lightcyan;
+}
+
+.song-container li:nth-child(3) {
+  background: lightskyblue;
+}
+
+.song-container li:nth-child(4) {
+  background: rgb(255, 217, 50);
+}
+
+.song-container li:nth-child(5) {
+  background: lightcyan;
+}
+
+.song-container li:nth-child(6) {
+  background-color: pink;
+}
+
+.song-container li:nth-child(7) {
+  background: rgb(255, 217, 50);
+}
+
+.song-container li:nth-child(8) {
+  background: lightskyblue;
+}
+
+.song-container li:nth-child(even):after {
+  content: "\01F4BF";
+  font-size: 100px;
+}
+
+.song-container li:nth-child(odd):after {
+  content: "\01F4C0";
+  font-size: 100px;
+}
+
+/*soundwave*/
+
+svg {
+  width: 100%;
+  height: 400px;
+  margin: -180px 0;
+}
+
+path {
+  stroke: white;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: none;
+}
+
+/* //// About us Section//// */
+
+.intro-container {
+  display: flex;
+  margin: 60px auto;
+  width: 60%;
+}
+
+#names {
+  width: 20%;
+  margin-right: 40px;
+}
+
+#intro-txt {
+  width: 80%;
+}
+
+/* clickable band member names*/
+
+#names ul {
+  list-style-type: none;
+  margin: 0;
+}
+
+#names li {
+  margin-bottom: 40px;
+  font-weight: bold;
+  font-size: 25px;
+  color: rgba(61, 57, 57, 0.651);
+}
+
+#names li:hover {
+  color: rgba(61, 57, 57, 0.808);
+  cursor: pointer;
+}
+
+#names li.active {
+  color: black;
+}
+
+/* intros to the band members*/
+
+#intro-txt div {
+  display: none;
+}
+
+#intro-txt div.show {
+  display: block;
+}
+
+/* alternative text for tiny mobiles*/
+
+#alt-band-txt {
+  display: none;
+}
+
+/* //// Contact section ////*/
+
+#contact-container {
+  text-align: center;
+  margin: auto;
+}
+
+#socials * {
+  font-size: 25px;
+  padding: 10px;
+  color: black;
+}
+
+/* //// Gig section ////*/
+
+#gigs h3 {
+  margin: 40px 0 40px 0;
+}
+
+/* moon animation */
+
+#moon-changer {
+  width: 150px;
+  margin: 30px auto;
+}
+
+#moon-changer:before {
+  content: "\01F311";
+  font-size: 150px;
+  animation: change-moon 3s ease infinite;
+}
+
+@keyframes change-moon {
+  0% {
+    content: "\01F311";
+  }
+  10% {
+    content: "\01F312";
+  }
+  20% {
+    content: "\01F313";
+  }
+  30% {
+    content: "\01F314";
+  }
+  40% {
+    content: "\01F315";
+  }
+  50% {
+    content: "\01F316";
+  }
+  60% {
+    content: "\01F317";
+  }
+  70% {
+    content: "\01F318";
+  }
+  100% {
+    content: "\01F311";
+  }
+}
+
+/* //// Media Queries ////*/
+
+@media (max-width: 391px) {
+  #intro-band-txt {
+    display: none;
+  }
+
+  #alt-band-txt {
+    display: block;
+  }
+
+  #socials * {
+    padding: 5px;
+  }
+}
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  h1 {
+    margin-bottom: 30px;
+  }
+
+  .spacing {
+    padding: 4vw 8vw 4vw 8vw;
+  }
+
+  /* display intro differently */
+
+  .intro-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  #intro-txt div span {
+    font-size: 15px;
+  }
+
+  #names {
+    width: 100%;
+  }
+
+  #names ul {
+    padding: 0;
+    margin: -15px 0 20px 0;
+  }
+
+  #names li {
+    font-size: 20px;
+    display: inline;
+    padding-right: 30px;
+  }
+
+  #intro-txt {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .intro-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 1500px) {
+  .spacing {
+    padding: 4vw 15vw 4vw 15vw;
+  }
+}
