@@ -40,7 +40,7 @@ function pauseOtherSongs(playingSong) {
 //svg sound wave
 
 let xs = [];
-for (var i = 0; i <= 2800; i++) {
+for (var i = 0; i <= 5200; i++) {
   xs.push(i);
 }
 
